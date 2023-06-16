@@ -10,13 +10,6 @@
           "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEv41MohsvEhlmrXPpltPG4DHZuqqhuZOe1MeOHUeQuH3CjeZyU3ifS6InAD29vn/CeUQOx+XScbEeXSItStd8zg==",
           "url": "http://127.0.0.1:6962/demo-log/",
           "mmd": 86400
-        },
-        {
-          "description": "demo-log2",
-          "log_id": "gVyzhhNTDpzDTpuhro0pTFAWY+SjDHBxL+yWkvotN98=",
-          "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEfKbXCVAwNIEsy9kzsv86cejydESQHHk690i5brypcg5wjPy7pd5XpyKHHvtr7o+QvawOIbndDukrBvyi66C7Xg==",
-          "url": "http://127.0.0.1:6962/demo-log2/",
-          "mmd": 86400
         }
       ]
     },
