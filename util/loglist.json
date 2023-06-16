@@ -5,10 +5,10 @@
       "email": [],
       "logs": [
         {
-          "description": "demo-log1",
+          "description": "demo-log",
           "log_id": "KFwLe0vZkG6sFVuPaRiMkByRsswkEuPWJJVCvp/l48Y=",
           "key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEv41MohsvEhlmrXPpltPG4DHZuqqhuZOe1MeOHUeQuH3CjeZyU3ifS6InAD29vn/CeUQOx+XScbEeXSItStd8zg==",
-          "url": "http://127.0.0.1:6962/demo-log1/",
+          "url": "http://127.0.0.1:6962/demo-log/",
           "mmd": 86400
         },
         {
