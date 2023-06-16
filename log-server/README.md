@@ -73,7 +73,7 @@ para iniciar o log de CT.
 Em seguida, inicie o servidor de DT utilizando o seguinte comando em outro terminal:
 
 ```bash
-./run-server --log http://127.0.0.1:6962/demo-log1/
+./run-server --log http://127.0.0.1:6962/demo-log/
 ```
 
 e rode o seguinte comando em outro terminal:
@@ -97,37 +97,3 @@ acabou de ser atualizado (ocorreu uma nova sincronização com os logs)
 e as linhas "New certificate for example-1.com" indicam que um novo certificado foi detectado
 para o domínio example-1.com. Observa-se que a ferramenta filtra os resultados
 e apresenta apenas os certificados relevantes.
-
-## Parte 2 - Vários Logs
-
-A segunda parte da demonstração é parecida com a primeira, mas utiliza dois logs de CT.
-
-Primeiramente, execute:
-
-```bash
-cd demo
-sudo docker-compose up
-```
-
-para iniciar os logs de CT.
-
-Em seguida, inicie o servidor de DT utilizando o seguinte comando em outro terminal:
-
-```bash
-./run-server --log http://127.0.0.1:6962/demo-log1/ --log http://127.0.0.1:6962/demo-log2/
-```
-
-e rode o seguinte comando em outro terminal:
-
-```bash
-cd demo
-go run ./cmd/add-certificates -part2
-```
-
-Por fim, execute a ferramenta para rastrear o domínio example-1.com:
-
-```bash
-./track-domain --domain example-1.com
-```
-
-Verifica-se que a ferramenta obtém os certificados de ambos os logs.

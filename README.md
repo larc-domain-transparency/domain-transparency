@@ -10,7 +10,7 @@ As instruções para a demonstração dessa ferramenta podem ser encontradas [aq
 
 Para instalar a ferramenta num sistema Linux, siga as instruções abaixo:
 
-1. Instale em seu sistema a linguagem Go, versão 1.16 ou superior, conforme
+1. Instale em seu sistema a linguagem Go, versão 1.18 ou superior, conforme
    as [instruções oficiais de instalação](https://golang.org/doc/install).
    Instale também o programa [git](https://git-scm.com/downloads)
    (necessário para executar o `git clone` no próximo passo).
@@ -18,10 +18,10 @@ Para instalar a ferramenta num sistema Linux, siga as instruções abaixo:
 2. Para compilar a ferramenta, execute os seguintes comandos no terminal:
 
    ```bash
-   git clone https://github.com/fernandokm/transparencia-de-dominios
-   cd transparencia-de-dominios
-   go build github.com/larc-domain-transparency/domain-transparency/cmd/run-server
-   go build github.com/larc-domain-transparency/domain-transparency/cmd/track-domain
+   git clone https://github.com/larc-domain-transparency/domain-transparency
+   cd domain-transparency/dt-structures
+   go build github.com/larc-domain-transparency/domain-transparency/dt-structures/cmd/run-server
+   go build github.com/larc-domain-transparency/domain-transparency/dt-structures/cmd/track-domain
    ```
 
    Esses comandos instalarão todas as bibliotecas de Go necessárias e
