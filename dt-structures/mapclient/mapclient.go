@@ -10,8 +10,8 @@ import (
 
 	"github.com/google/certificate-transparency-go/tls"
 	"github.com/gorilla/schema"
-	ds "github.com/larc-domain-transparency/domain-transparency/server"
-	"github.com/larc-domain-transparency/domain-transparency/util"
+	ds "github.com/larc-domain-transparency/domain-transparency/dt-structures/server"
+	"github.com/larc-domain-transparency/domain-transparency/dt-structures/util"
 )
 
 var encoder = schema.NewEncoder()

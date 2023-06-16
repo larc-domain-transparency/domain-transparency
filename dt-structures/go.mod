@@ -1,4 +1,4 @@
-module github.com/larc-domain-transparency/domain-transparency
+module github.com/larc-domain-transparency/domain-transparency/dt-structures
 
 go 1.16
 

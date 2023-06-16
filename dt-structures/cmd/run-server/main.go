@@ -16,9 +16,9 @@ import (
 	"github.com/google/certificate-transparency-go/client"
 	"github.com/google/certificate-transparency-go/jsonclient"
 	"github.com/google/certificate-transparency-go/loglist2"
-	dt "github.com/larc-domain-transparency/domain-transparency"
-	ds "github.com/larc-domain-transparency/domain-transparency/server"
-	"github.com/larc-domain-transparency/domain-transparency/util"
+	dt "github.com/larc-domain-transparency/domain-transparency/dt-structures"
+	ds "github.com/larc-domain-transparency/domain-transparency/dt-structures/server"
+	"github.com/larc-domain-transparency/domain-transparency/dt-structures/util"
 )
 
 var (
