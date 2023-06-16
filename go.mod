@@ -1,4 +1,4 @@
-module github.com/fernandokm/transparencia-de-dominios
+module github.com/larc-domain-transparency/domain-transparency
 
 go 1.16
 

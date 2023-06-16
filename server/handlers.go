@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net/url"
 
-	dt "github.com/fernandokm/transparencia-de-dominios"
-	"github.com/fernandokm/transparencia-de-dominios/util"
 	"github.com/gorilla/schema"
+	dt "github.com/larc-domain-transparency/domain-transparency"
+	"github.com/larc-domain-transparency/domain-transparency/util"
 )
 
 var decoder = schema.NewDecoder()
@@ -18,14 +18,17 @@ type dtHandler struct {
 
 // GET /dt/v1/get-smh
 // Params:
-//     <none>
+//
+//	<none>
+//
 // Response:
-//     timestamp: integer
-//     map_size: integer
-//     map_root_hash: base64
-//     source_tree_root_hash: base64
-//     source_log_revisions: array of {tree_size: integer, root_hash: base64}
-//     map_head_signature: base64
+//
+//	timestamp: integer
+//	map_size: integer
+//	map_root_hash: base64
+//	source_tree_root_hash: base64
+//	source_log_revisions: array of {tree_size: integer, root_hash: base64}
+//	map_head_signature: base64
 func (h *dtHandler) getSMH(query url.Values) (interface{}, error) {
 	var req GetSMHRequest
 	if err := decoder.Decode(&req, query); err != nil {
@@ -36,11 +39,14 @@ func (h *dtHandler) getSMH(query url.Values) (interface{}, error) {
 
 // GET /dt/v1/get-consistency-proof
 // Params:
-//     domain_name: string
-//     first: integer
-//     second: integer
+//
+//	domain_name: string
+//	first: integer
+//	second: integer
+//
 // Response:
-//     proof: array of base64
+//
+//	proof: array of base64
 func (h *dtHandler) getConsistencyProof(query url.Values) (interface{}, error) {
 	var req GetConsistencyProofRequest
 	if err := decoder.Decode(&req, query); err != nil {
@@ -66,14 +72,17 @@ func (h *dtHandler) getConsistencyProof(query url.Values) (interface{}, error) {
 
 // GET /dt/v1/get-domain-root-and-proof
 // Params:
-//     domain_name: string
-//     domain_map_size: integer
+//
+//	domain_name: string
+//	domain_map_size: integer
+//
 // Response:
-//     domain_tree_size: integer
-//     domain_tree_root_hash: base64
-//     normalized_domain_name: string
-//     leaf_hash: base64
-//     audit_path: array of base64
+//
+//	domain_tree_size: integer
+//	domain_tree_root_hash: base64
+//	normalized_domain_name: string
+//	leaf_hash: base64
+//	audit_path: array of base64
 func (h *dtHandler) getDomainRootAndProof(query url.Values) (interface{}, error) {
 	var req GetDomainRootAndProofRequest
 	if err := decoder.Decode(&req, query); err != nil {
@@ -109,11 +118,14 @@ func (h *dtHandler) getDomainRootAndProof(query url.Values) (interface{}, error)
 
 // GET /dt/v1/get-entries
 // Params:
-//     domain_name: string
-//     start: integer
-//     end: integer
+//
+//	domain_name: string
+//	start: integer
+//	end: integer
+//
 // Response:
-//     entries: array of [integer, integer]
+//
+//	entries: array of [integer, integer]
 func (h *dtHandler) getEntries(query url.Values) (interface{}, error) {
 	var req GetEntriesRequest
 	if err := decoder.Decode(&req, query); err != nil {
@@ -148,12 +160,15 @@ func (h *dtHandler) getEntries(query url.Values) (interface{}, error) {
 
 // GET /dt/v1/get-entry-and-proof
 // Params:
-//     domain_name: string
-//     index: integer
-//     domain_tree_size: integer
+//
+//	domain_name: string
+//	index: integer
+//	domain_tree_size: integer
+//
 // Response:
-//     entry: [integer, integer]
-//     audit_path: array of base64
+//
+//	entry: [integer, integer]
+//	audit_path: array of base64
 func (h *dtHandler) getEntryAndProof(query url.Values) (interface{}, error) {
 	var req GetEntryAndProofRequest
 	if err := decoder.Decode(&req, query); err != nil {
@@ -182,11 +197,14 @@ func (h *dtHandler) getEntryAndProof(query url.Values) (interface{}, error) {
 
 // GET /dt/v1/get-domain-tree-index
 // Params:
-//     domain_name: string
-//     log_index: integer
-//     certificate_index: integer
+//
+//	domain_name: string
+//	log_index: integer
+//	certificate_index: integer
+//
 // Response:
-//     domain_tree_index: integer
+//
+//	domain_tree_index: integer
 func (h *dtHandler) getDomainTreeIndex(query url.Values) (interface{}, error) {
 	var req GetDomainTreeIndexRequest
 	if err := decoder.Decode(&req, query); err != nil {
@@ -214,10 +232,13 @@ func (h *dtHandler) getDomainTreeIndex(query url.Values) (interface{}, error) {
 
 // GET /dt/v1/get-source-logs
 // Params:
-//     start: integer
-//     end: integer
+//
+//	start: integer
+//	end: integer
+//
 // Response:
-//     log_ids: array of base64
+//
+//	log_ids: array of base64
 func (h *dtHandler) getSourceLogs(query url.Values) (interface{}, error) {
 	var req GetSourceLogsRequest
 	if err := decoder.Decode(&req, query); err != nil {
@@ -243,11 +264,14 @@ func (h *dtHandler) getSourceLogs(query url.Values) (interface{}, error) {
 
 // GET /dt/v1/get-source-log-and-proof
 // Params:
-//     index: integer
-//     source_tree_size: integer
+//
+//	index: integer
+//	source_tree_size: integer
+//
 // Response:
-//     log_id: base64
-//     audit_path: array of base64
+//
+//	log_id: base64
+//	audit_path: array of base64
 func (h *dtHandler) getSourceLogAndProof(query url.Values) (interface{}, error) {
 	var req GetSourceLogAndProofRequest
 	if err := decoder.Decode(&req, query); err != nil {
@@ -267,10 +291,13 @@ func (h *dtHandler) getSourceLogAndProof(query url.Values) (interface{}, error) 
 
 // GET /dt/v1/get-source-consistency-proof
 // Params:
-//     first: integer
-//     second: integer
+//
+//	first: integer
+//	second: integer
+//
 // Response:
-//     proof: array of base64
+//
+//	proof: array of base64
 func (h *dtHandler) getSourceConsistencyProof(query url.Values) (interface{}, error) {
 	var req GetSourceConsistencyProofRequest
 	if err := decoder.Decode(&req, query); err != nil {

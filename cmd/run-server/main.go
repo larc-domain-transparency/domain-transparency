@@ -13,12 +13,12 @@ import (
 	"syscall"
 	"time"
 
-	dt "github.com/fernandokm/transparencia-de-dominios"
-	ds "github.com/fernandokm/transparencia-de-dominios/server"
-	"github.com/fernandokm/transparencia-de-dominios/util"
-	"github.com/google/certificate-transparency-go/client"
 	"github.com/google/certificate-transparency-go/jsonclient"
 	"github.com/google/certificate-transparency-go/loglist2"
+	"github.com/google/trillian/client"
+	dt "github.com/larc-domain-transparency/domain-transparency"
+	ds "github.com/larc-domain-transparency/domain-transparency/server"
+	"github.com/larc-domain-transparency/domain-transparency/util"
 )
 
 var (

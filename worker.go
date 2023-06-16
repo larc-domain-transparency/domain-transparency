@@ -7,8 +7,8 @@ import (
 	"sort"
 	"time"
 
-	"github.com/fernandokm/transparencia-de-dominios/util"
 	"github.com/google/certificate-transparency-go/logid"
+	"github.com/larc-domain-transparency/domain-transparency/util"
 )
 
 // A WorkerTransaction specified the actions to be taken by the worker.

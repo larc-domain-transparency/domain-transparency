@@ -1,6 +1,6 @@
 package ds
 
-import dt "github.com/fernandokm/transparencia-de-dominios"
+import dt "github.com/larc-domain-transparency/domain-transparency"
 
 type GetSMHRequest struct {
 }

@@ -8,9 +8,6 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/fernandokm/transparencia-de-dominios/mapclient"
-	ds "github.com/fernandokm/transparencia-de-dominios/server"
-	"github.com/fernandokm/transparencia-de-dominios/util"
 	ct "github.com/google/certificate-transparency-go"
 	"github.com/google/certificate-transparency-go/client"
 	"github.com/google/certificate-transparency-go/jsonclient"
@@ -18,6 +15,9 @@ import (
 	"github.com/google/certificate-transparency-go/x509"
 	"github.com/google/trillian/merkle"
 	"github.com/google/trillian/merkle/rfc6962"
+	"github.com/larc-domain-transparency/domain-transparency/mapclient"
+	ds "github.com/larc-domain-transparency/domain-transparency/server"
+	"github.com/larc-domain-transparency/domain-transparency/util"
 )
 
 type Update struct {

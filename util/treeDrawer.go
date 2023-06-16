@@ -4,9 +4,9 @@ import (
 	"encoding/base64"
 	"fmt"
 
-	"github.com/fernandokm/transparencia-de-dominios/mapstore"
 	"github.com/goccy/go-graphviz"
 	"github.com/goccy/go-graphviz/cgraph"
+	"github.com/larc-domain-transparency/domain-transparency/mapstore"
 	"github.com/lazyledger/smt"
 )
 

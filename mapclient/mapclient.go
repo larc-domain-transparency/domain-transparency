@@ -8,10 +8,10 @@ import (
 	"net/http"
 	"strings"
 
-	ds "github.com/fernandokm/transparencia-de-dominios/server"
-	"github.com/fernandokm/transparencia-de-dominios/util"
 	"github.com/google/certificate-transparency-go/tls"
 	"github.com/gorilla/schema"
+	ds "github.com/larc-domain-transparency/domain-transparency/server"
+	"github.com/larc-domain-transparency/domain-transparency/util"
 )
 
 var encoder = schema.NewEncoder()

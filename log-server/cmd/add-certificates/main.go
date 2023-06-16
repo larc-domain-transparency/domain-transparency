@@ -20,12 +20,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/fernandokm/transparencia-de-dominios/util"
 	ct "github.com/google/certificate-transparency-go"
 	"github.com/google/certificate-transparency-go/client"
 	"github.com/google/certificate-transparency-go/jsonclient"
 	"github.com/google/certificate-transparency-go/x509"
 	"github.com/google/certificate-transparency-go/x509/pkix"
+	"github.com/larc-domain-transparency/domain-transparency/util"
 )
 
 var (
@@ -147,12 +147,12 @@ func main() {
 	var logs []*client.LogClient
 	var logNames []string
 	if *runPart1 {
-		logs = append(logs, getClient("demo-log1"))
-		logNames = append(logNames, "demo-log1")
+		logs = append(logs, getClient("demo-log"))
+		logNames = append(logNames, "demo-log")
 	} else if *runPart2 {
-		logs = append(logs, getClient("demo-log1"))
+		logs = append(logs, getClient("demo-log"))
 		logs = append(logs, getClient("demo-log2"))
-		logNames = append(logNames, "demo-log1")
+		logNames = append(logNames, "demo-log")
 		logNames = append(logNames, "demo-log2")
 	}
 

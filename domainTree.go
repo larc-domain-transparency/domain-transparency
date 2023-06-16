@@ -5,9 +5,9 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/fernandokm/transparencia-de-dominios/util"
 	ct "github.com/google/certificate-transparency-go"
 	"github.com/google/certificate-transparency-go/tls"
+	"github.com/larc-domain-transparency/domain-transparency/util"
 )
 
 // A DomainTreeRoot stores information about a domain tree.

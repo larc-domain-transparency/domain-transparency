@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"time"
 
-	dt "github.com/fernandokm/transparencia-de-dominios"
-	"github.com/fernandokm/transparencia-de-dominios/util"
 	ct "github.com/google/certificate-transparency-go"
 	"github.com/google/certificate-transparency-go/client"
 	"github.com/google/certificate-transparency-go/scanner"
 	"github.com/google/certificate-transparency-go/x509"
+	dt "github.com/larc-domain-transparency/domain-transparency"
+	"github.com/larc-domain-transparency/domain-transparency/util"
 )
 
 type FetchParams struct {
