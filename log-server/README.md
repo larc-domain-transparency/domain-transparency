@@ -38,32 +38,20 @@ são dadas abaixo:
    ```bash
    cd trillian
    go run ./cmd/createtree --admin_server=127.0.0.1:8090 --tree_type=LOG
-   go run ./cmd/createtree --admin_server=127.0.0.1:8090 --tree_type=LOG
    ```
 
-   Cada um dos dois comandos acima deve ter impresso um ID no terminal.
-   Coloque esses IDs no arquivo [ct_config/ct_server.cfg](ct_config/ct_server.cfg),
-   nos campos `log_id`:
+   Esse comando deve ter impresso um ID no terminal.
+   Coloque esse ID no arquivo [ct_config/ct_server.cfg](ct_config/ct_server.cfg),
+   no campo `log_id`:
 
    ```protobuf
    config {
       log_id: <SAÍDA DO PRIMEIRO COMANDO>
-      prefix: "demo-log1"
+      prefix: "demo-log"
       roots_pem_file: "/ctfe-config/roots.pem"
       private_key: {
          [type.googleapis.com/keyspb.PEMKeyFile] {
             path: "/ctfe-config/ct1_priv.pem"
-         }
-      }
-   }
-
-   config {
-      log_id: <SAÍDA DO SEGUNDO COMANDO>
-      prefix: "demo-log2"
-      roots_pem_file: "/ctfe-config/roots.pem"
-      private_key: {
-         [type.googleapis.com/keyspb.PEMKeyFile] {
-            path: "/ctfe-config/ct2_priv.pem"
          }
       }
    }
