@@ -20,8 +20,8 @@ Para instalar a ferramenta num sistema Linux, siga as instruções abaixo:
    ```bash
    git clone https://github.com/fernandokm/transparencia-de-dominios
    cd transparencia-de-dominios
-   go build github.com/fernandokm/transparencia-de-dominios/cmd/run-server
-   go build github.com/fernandokm/transparencia-de-dominios/cmd/track-domain
+   go build github.com/larc-domain-transparency/domain-transparency/cmd/run-server
+   go build github.com/larc-domain-transparency/domain-transparency/cmd/track-domain
    ```
 
    Esses comandos instalarão todas as bibliotecas de Go necessárias e
