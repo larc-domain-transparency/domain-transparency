@@ -7,7 +7,7 @@ import (
 
 	"github.com/google/trillian/merkle"
 	"github.com/google/trillian/merkle/rfc6962"
-	"github.com/larc-domain-transparency/domain-transparency/dt-structures/mapstore"
+	"github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/mapstore"
 )
 
 type merkleMapStore struct {

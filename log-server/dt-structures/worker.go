@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/google/certificate-transparency-go/logid"
-	"github.com/larc-domain-transparency/domain-transparency/dt-structures/util"
+	"github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/util"
 )
 
 // A WorkerTransaction specified the actions to be taken by the worker.

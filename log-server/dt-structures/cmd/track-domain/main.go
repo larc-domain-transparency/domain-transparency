@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/larc-domain-transparency/domain-transparency/dt-structures/mapclient"
+	"github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/mapclient"
 )
 
 var (

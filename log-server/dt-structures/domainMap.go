@@ -11,8 +11,8 @@ import (
 
 	ct "github.com/google/certificate-transparency-go"
 	"github.com/google/certificate-transparency-go/tls"
-	"github.com/larc-domain-transparency/domain-transparency/dt-structures/mapstore"
-	"github.com/larc-domain-transparency/domain-transparency/dt-structures/util"
+	"github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/mapstore"
+	"github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/util"
 	"github.com/lazyledger/smt"
 )
 

@@ -6,7 +6,7 @@ import (
 
 	"github.com/goccy/go-graphviz"
 	"github.com/goccy/go-graphviz/cgraph"
-	"github.com/larc-domain-transparency/domain-transparency/dt-structures/mapstore"
+	"github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/mapstore"
 	"github.com/lazyledger/smt"
 )
 

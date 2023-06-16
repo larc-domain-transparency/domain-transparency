@@ -1,6 +1,6 @@
 package ds
 
-import dt "github.com/larc-domain-transparency/domain-transparency/dt-structures"
+import dt "github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures"
 
 type GetSMHRequest struct {
 }

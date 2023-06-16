@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	dt "github.com/larc-domain-transparency/domain-transparency/dt-structures"
+	dt "github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures"
 )
 
 // NewServer creates a new domain server.

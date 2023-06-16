@@ -15,9 +15,9 @@ import (
 	"github.com/google/certificate-transparency-go/x509"
 	"github.com/google/trillian/merkle"
 	"github.com/google/trillian/merkle/rfc6962"
-	"github.com/larc-domain-transparency/domain-transparency/dt-structures/mapclient"
-	ds "github.com/larc-domain-transparency/domain-transparency/dt-structures/server"
-	"github.com/larc-domain-transparency/domain-transparency/dt-structures/util"
+	"github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/mapclient"
+	ds "github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/server"
+	"github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/util"
 )
 
 type Update struct {

@@ -9,8 +9,8 @@ import (
 	"github.com/google/certificate-transparency-go/client"
 	"github.com/google/certificate-transparency-go/scanner"
 	"github.com/google/certificate-transparency-go/x509"
-	dt "github.com/larc-domain-transparency/domain-transparency/dt-structures"
-	"github.com/larc-domain-transparency/domain-transparency/dt-structures/util"
+	dt "github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures"
+	"github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/util"
 )
 
 type FetchParams struct {

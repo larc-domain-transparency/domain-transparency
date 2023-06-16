@@ -25,7 +25,7 @@ import (
 	"github.com/google/certificate-transparency-go/jsonclient"
 	"github.com/google/certificate-transparency-go/x509"
 	"github.com/google/certificate-transparency-go/x509/pkix"
-	"github.com/larc-domain-transparency/domain-transparency/dt-structures/util"
+	"github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/util"
 )
 
 var (

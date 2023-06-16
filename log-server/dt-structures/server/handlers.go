@@ -5,8 +5,8 @@ import (
 	"net/url"
 
 	"github.com/gorilla/schema"
-	dt "github.com/larc-domain-transparency/domain-transparency/dt-structures"
-	"github.com/larc-domain-transparency/domain-transparency/dt-structures/util"
+	dt "github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures"
+	"github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/util"
 )
 
 var decoder = schema.NewDecoder()
