@@ -20,8 +20,8 @@ Para instalar a ferramenta num sistema Linux, siga as instruções abaixo:
    ```bash
    git clone https://github.com/larc-domain-transparency/domain-transparency
    cd domain-transparency/dt-structures
-   go build github.com/larc-domain-transparency/domain-transparency/dt-structures/cmd/run-server
-   go build github.com/larc-domain-transparency/domain-transparency/dt-structures/cmd/track-domain
+   go build github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/cmd/run-server
+   go build github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/cmd/track-domain
    ```
 
    Esses comandos instalarão todas as bibliotecas de Go necessárias e
