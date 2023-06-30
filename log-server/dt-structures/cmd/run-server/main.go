@@ -18,7 +18,7 @@ import (
 	"github.com/google/certificate-transparency-go/loglist2"
 	dt "github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures"
 	ds "github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/server"
-	"github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/util"
+	"github.com/larc-domain-transparency/domain-transparency/log-server/util"
 )
 
 var (

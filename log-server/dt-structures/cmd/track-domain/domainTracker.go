@@ -17,7 +17,7 @@ import (
 	"github.com/google/trillian/merkle/rfc6962"
 	"github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/mapclient"
 	ds "github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/server"
-	"github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures/util"
+	"github.com/larc-domain-transparency/domain-transparency/log-server/util"
 )
 
 type Update struct {

@@ -3,4 +3,5 @@ go 1.20
 use (
 	./log-server/ct-structures
 	./log-server/dt-structures
+	./log-server/util
 )
