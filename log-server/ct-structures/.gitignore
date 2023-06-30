@@ -1,2 +1,4 @@
 /trillian
 /certificate-transparency-go
+
+go.sum
