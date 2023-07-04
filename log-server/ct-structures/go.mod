@@ -4,7 +4,6 @@ go 1.20
 
 require (
 	github.com/google/certificate-transparency-go v1.1.1
-	github.com/larc-domain-transparency/domain-transparency/log-server/dt-structures v0.0.0-20230630142946-a6a622b2c46b
 )
 
 require (

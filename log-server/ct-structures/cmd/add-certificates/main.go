@@ -163,6 +163,7 @@ func main() {
 		"example-4.com", "example-5.com", "example-6.com",
 		"example-7.com", "example-8.com", "example-9.com"}
 	i := 0
+	count := 0
 	for {
 		for j, log := range logs {
 			chain := generateCertificate(domains[i], caCert, caPriv)
@@ -170,11 +171,17 @@ func main() {
 			if err != nil {
 				fmt.Printf("Error adding certificate to %s: %v\n", logNames[j], err)
 			} else {
-				fp := sha256.Sum256(chain[0].Data)
-				fmt.Printf("Added certificate for %q to %s  (sha256 fingerprint: %x...)\n", domains[i], logNames[j], fp[:4])
+				if count%100 == 0 {
+					fp := sha256.Sum256(chain[0].Data)
+					fmt.Printf("Added certificate %d for %q to %s  (sha256 fingerprint: %x...)\n", count, domains[i], logNames[j], fp[:4])
+				}
 			}
 			i = (i + 1) % len(domains)
-			time.Sleep(400 * time.Millisecond)
+			count++
+			// time.Sleep(4 * time.Millisecond)
+		}
+		if count >= 10000 {
+			break
 		}
 	}
 
