@@ -94,6 +94,7 @@ func (w *worker) run(ctx context.Context, c <-chan WorkerTransaction) error {
 		}
 		continue
 	publishSHM:
+
 		if w.mapSize == 0 {
 			fmt.Printf("Warning: the MMD expired, but the first STH hasn't been fetched yet. Resetting MMD timer.\n")
 			continue
@@ -113,6 +114,8 @@ func (w *worker) run(ctx context.Context, c <-chan WorkerTransaction) error {
 }
 
 func (w *worker) addToQueueAndProcess(t WorkerTransaction) error {
+	start := time.Now()
+
 	tryProcess := func(t WorkerTransaction) (bool, error) {
 		if uint64(len(w.sourceRevisions)) < t.LogIndex {
 			// This condition means that the log at index t.LogIndex-1 hasn't been added yet,
@@ -137,6 +140,9 @@ func (w *worker) addToQueueAndProcess(t WorkerTransaction) error {
 			i -= 1
 		}
 	}
+
+	elapsed := time.Since(start)
+	fmt.Printf("Map construction took %s\n", elapsed)
 	return nil
 }
 

@@ -47,6 +47,7 @@ func FetchLogForWorker(ctx context.Context, params FetchParams) error {
 }
 
 func runFetcherIteration(ctx context.Context, cancel context.CancelFunc, params FetchParams, opts *scanner.FetcherOptions) error {
+	start := time.Now()
 	opts.EndIndex = 0
 	f := scanner.NewFetcher(params.LogClient, opts)
 	if ctx.Err() != nil {
@@ -119,6 +120,9 @@ func runFetcherIteration(ctx context.Context, cancel context.CancelFunc, params 
 	if processErr != nil {
 		return fmt.Errorf("error processing data: %w", processErr)
 	}
+
+	elapsed := time.Since(start)
+	fmt.Printf("Fetcher took %s\n", elapsed)
 
 	params.C <- t
 	opts.StartIndex = int64(sth.TreeSize)

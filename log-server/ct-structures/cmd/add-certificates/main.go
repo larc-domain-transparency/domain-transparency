@@ -180,7 +180,7 @@ func main() {
 			count++
 			// time.Sleep(4 * time.Millisecond)
 		}
-		if count >= 10000 {
+		if count >= 1000 {
 			break
 		}
 	}
