@@ -1,4 +1,5 @@
 import requests
+import json
 
 class ExtractApi() :
 
@@ -7,4 +8,4 @@ class ExtractApi() :
         self.payload = payload
 
     def GetResponse(self) :
-        return requests.get(self.url, params=self.payload)
+        return json.loads(requests.get(self.url, params=self.payload).text)

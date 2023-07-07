@@ -1,68 +1,52 @@
-import ExtractApi from extractclass
+from extractclass import ExtractApi
+import json 
 
-def get-smh() :
+def test() :
+    print("Worked!")
+
+def get_smh() :
     url='http://127.0.0.1:8021/dt/v1/get-smh'
     payload={}
 
     return ExtractApi(url, payload).GetResponse()
 
-    
-def get-domain-root-and-proof(domain_name) :
-    url='http://127.0.0.1:8021/dt/v1/get-domain-root-and-proof'
-    payload={
-        "domain_name" : domain_name,
-        "domain_map_size" : 563
+def get_domain_entries(domain_name) :
+    # it returns only the index of the domain_name given for log server 0
+    url='http://127.0.0.1:8021/dt/v1/get-entries' 
+    payload={ # for now range of 20
+        'domain_name': domain_name, 
+        'start': 0, 
+        'end':20
     }
 
-    return ExtractApi(url, payload).GetResponse()
+    return [item[1] for item in ExtractApi(url, payload).GetResponse()['entries']]
 
-def consistency-proof(domain_name) :
-    url='http://127.0.0.1:8021/dt/v1/get-consistency-proof'
-    payload={
-        "domain_name" : domain_name,
-        "first" : 2,
-        "second" : 20
-    }
+def get_domain_certificates(domain_entries) :
+    # it returns a list of domain certificates with their domain entry, the leaf input and some extra data 
+    url='http://127.0.0.1:6962/demo-log/ct/v1/get-entries'
+    domain_certificates = []
 
-    return ExtractApi(url, payload).GetResponse()
+    for domain_entry in domain_entries :
+        certificates_data = []
+        certificates_data.append(domain_entry) # push domain entry
 
-def entry-and-proof(domain_name) :
-    url='http://127.0.0.1:8021/dt/v1/get-consistency-proof'
-    payload={
-        "domain_name" : domain_name,
-        "index" : 2,
-        "domain_tree_size" : 20
-    }
+        payload={ 
+            'start': domain_entry, 
+            'end': domain_entry
+        }
+        certificate_info = ExtractApi(url, payload).GetResponse()
 
-    return ExtractApi(url, payload).GetResponse()
+        certificates_data.append(certificate_info['entries'][0]['leaf_input']) # push left input
+        certificates_data.append(certificate_info['entries'][0]['leaf_input']) # push extra data
 
-def entry() :
+        domain_certificates.append(certificates_data)
 
-    api = ExtractApi(url, payload)
+    return domain_certificates
 
-    return api.GetResponse()
+# test()
+# obj = get_domain_entries('example-1.com')
+# print(len(obj))
+# print(type(obj))
+# print(get_domain_certificates(obj))
 
-def get-domain-tree-index() :
-
-    api = ExtractApi(url, payload)
-
-    return api.GetResponse()
-
-def get-source-logs() :
-
-    api = ExtractApi(url, payload)
-
-    return api.GetResponse()
-
-def get-source-log-and-proof() :
-
-    api = ExtractApi(url, payload)
-
-    return api.GetResponse()
-
-def get-source-logs() :
-
-    api = ExtractApi(url, payload)
-
-    return api.GetResponse()
 
